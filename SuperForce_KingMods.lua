@@ -2,26 +2,23 @@
 -- SuperForce_KingMods
 --
 -- Author: KingMods
--- Date: 12.11.2024
--- Version: 1.0.0.0
+-- Contributors: Jean-Sébastien
+-- Date: 22.11.2024
+-- Version: 1.0.0.1
 --
 -- https://www.kingmods.net/
 --
 
 SuperForce = {}
 
-SuperForce.initialized = false
+SuperForce.initialized = {}
 
 function SuperForce:update(dt)
-    if not SuperForce.initialized then
-        if g_currentMission.playerSystem ~= nil then
-            if g_currentMission.playerSystem.players ~= nil then
-                if g_currentMission.playerSystem.players[g_currentMission.playerUserId] ~= nil then
-                    if g_currentMission.playerSystem.players[g_currentMission.playerUserId].hands ~= nil then
-                        g_currentMission.playerSystem.players[g_currentMission.playerUserId].hands:consoleCommandToggleSuperStrength()
-                        SuperForce.initialized = true
-                    end
-                end
+    if g_currentMission.playerSystem ~= nil and g_currentMission.playerSystem.players ~= nil then
+        for userId, player in pairs(g_currentMission.playerSystem.players) do
+            if not SuperForce.initialized[userId] and player.hands ~= nil then
+                player.hands:consoleCommandToggleSuperStrength()
+                SuperForce.initialized[userId] = true
             end
         end
     end

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="92">
     <author>KingMods</author>
-	<version>1.0.0.0</version>
+    <contributors>Jean-Sébastien</contributors>
+	<version>1.0.0.1</version>
 	<title>
         <en>Super Force (KingMods)</en>
 	</title>
     <description>
-		<en>Allows you to lift all objects, even the heaviest.</en>
-		<fr>Permets de soulever tous les objets, même les plus lourds.</fr>
-		<de>Ermöglicht das Heben aller Gegenstände, auch der schwersten.</de>
+		<en>Allows you to lift all objects, even the heaviest (works in singleplayer and multiplayer!)</en>
+		<fr>Permets de soulever tous les objets, même les plus lourds (fonctionne en solo et en multijoueur !)</fr>
+		<de>Ermöglicht das Heben aller Gegenstände, auch der schwersten (funktioniert im Einzelspieler- und Mehrspielermodus!)</de>
 	</description>
     <multiplayer supported="true" />
     <iconFilename>icon_superForce_kingMods.dds</iconFilename>    
